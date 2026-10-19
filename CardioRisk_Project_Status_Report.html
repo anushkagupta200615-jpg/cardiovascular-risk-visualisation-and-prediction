@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CardioRisk 3D — Project Status & Team Roadmap Report</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    
+    @page {
+      size: A4;
+      margin: 1.5cm;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.55;
+      color: #1e293b;
+      background: #f8fafc;
+      margin: 0;
+      padding: 24px;
+    }
+
+    .report-card {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+      padding: 48px;
+    }
+
+    .header-banner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 24px;
+      margin-bottom: 28px;
+    }
+
+    .header-title h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 6px 0;
+      letter-spacing: -0.02em;
+    }
+
+    .header-title p {
+      font-size: 14px;
+      color: #64748b;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .action-btn {
+      background: #0284c7;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 4px rgba(2, 132, 199, 0.2);
+    }
+
+    .action-btn:hover {
+      background: #0369a1;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-success { background: #dcfce7; color: #166534; }
+    .badge-primary { background: #e0f2fe; color: #0369a1; }
+    .badge-amber { background: #fef3c7; color: #92400e; }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 32px 0 16px 0;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 13px;
+    }
+
+    th {
+      background: #f1f5f9;
+      color: #334155;
+      text-align: left;
+      padding: 10px 14px;
+      font-weight: 600;
+      border-top: 1px solid #e2e8f0;
+      border-bottom: 1px solid #cbd5e1;
+    }
+
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #f1f5f9;
+      color: #334155;
+    }
+
+    tr:nth-child(even) {
+      background: #fafafa;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .team-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .team-card h3 {
+      margin: 0 0 4px 0;
+      font-size: 15px;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .team-card .role-subtitle {
+      font-size: 12px;
+      color: #0284c7;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .team-card ul {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 12.5px;
+      color: #475569;
+    }
+
+    .team-card li {
+      margin-bottom: 5px;
+    }
+
+    .roadmap-list {
+      background: #f8fafc;
+      border-left: 4px solid #0284c7;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin-top: 16px;
+      font-size: 13px;
+    }
+
+    .roadmap-list li {
+      margin-bottom: 8px;
+      color: #334155;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .report-card {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      .action-btn {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="report-card">
+    <div class="header-banner">
+      <div class="header-title">
+        <span class="badge badge-primary">Multimodal AI Hackathon 2026 — Track A</span>
+        <h1 style="margin-top: 8px;">Cardiovascular Risk Visualization & Prediction</h1>
+        <p>Project Status, Milestone Audit & Team Work Distribution</p>
+        <p style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Generated on October 20, 2026 • Team Lead: Tooba</p>
+      </div>
+      <div>
+        <button class="action-btn" onclick="window.print()">
+          🖨️ Download / Print PDF
+        </button>
+      </div>
+    </div>
+
+    <h2>1. Executive Project Summary</h2>
+    <p style="font-size: 13.5px; color: #475569;">
+      This project addresses Track A of the Multimodal AI Hackathon 2026 by delivering an integrated 3D interactive human heart viewer coupled with machine learning models that predict <strong>Overall CAD status</strong> alongside localized stenosis in the three critical coronary vessels (<strong>LAD, LCX, RCA</strong>), backed by transparent SHAP clinical feature attributions.
+    </p>
+
+    <h2>2. Current Progress Audit (What Has Been Done Till Now)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Status</th>
+          <th>Key Accomplishments & Implementation Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Data & Leakage Prevention</strong></td>
+          <td><span class="badge badge-success">Completed</span></td>
+          <td>Cleaned UCI Z-Alizadeh Sani dataset (303 records, ~55 features). Isolated LAD, LCX, RCA, and Cath from input features to prevent data leakage.</td>
+        </tr>
+        <tr>
+          <td><strong>ML Pipelines & Explainer</strong></td>
+          <td><span class="badge badge-success">Completed</span></td>
+          <td>Trained multi-target classification pipelines for CAD, LAD, LCX, and RCA; bundled preprocessor and SHAP TreeExplainer into <code>cardio_models.joblib</code>.</td>
+        </tr>
+        <tr>
+          <td><strong>FastAPI Microservice</strong></td>
+          <td><span class="badge badge-success">Completed</span></td>
+          <td>Developed <code>server.py</code> with <code>/predict</code> and health endpoints, CORS middleware enabled, and feature attribution calculations.</td>
+        </tr>
+        <tr>
+          <td><strong>Interactive Frontend UI</strong></td>
+          <td><span class="badge badge-success">Completed</span></td>
+          <td>Built React 19 + Vite dashboard with vitals input form, demo presets, real-time metrics cards, and clinical safety disclaimers.</td>
+        </tr>
+        <tr>
+          <td><strong>3D Anatomical Foundation</strong></td>
+          <td><span class="badge badge-success">Completed</span></td>
+          <td>Created Three.js + React Three Fiber 3D heart canvas with dynamic vessel risk color-coding (&lt;30% Green, 30–60% Amber, &gt;60% Red) and orbit controls.</td>
+        </tr>
+        <tr>
+          <td><strong>System Bug Fixes</strong></td>
+          <td><span class="badge badge-success">Completed</span></td>
+          <td>Resolved path ampersand issue, installed all frontend packages, added React 19 Suspense boundaries, and integrated Tailwind CSS styling.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. Team Work Distribution & Ownership</h2>
+    <div class="team-grid">
+      <!-- Shaista -->
+      <div class="team-card">
+        <h3>Shaista <span class="badge badge-primary">30% Rubric</span></h3>
+        <div class="role-subtitle">AI/ML Engineer • Model Evaluation & Benchmarking</div>
+        <ul>
+          <li><strong>Algorithm Benchmarking:</strong> Benchmark CatBoost, XGBoost, LightGBM, SVC, and ElasticNet.</li>
+          <li><strong>Probability Calibration:</strong> Implement <code>CalibratedClassifierCV</code> for reliable clinical risk percentages.</li>
+          <li><strong>Imbalance Handling:</strong> Tune class weights for minority stenotic cases in LCX and RCA.</li>
+          <li><strong>Evaluation Table:</strong> Document 5-fold CV metrics (Accuracy, Precision, Recall, F1, ROC-AUC).</li>
+        </ul>
+      </div>
+
+      <!-- Anamta -->
+      <div class="team-card">
+        <h3>Anamta <span class="badge badge-primary">35% Rubric</span></h3>
+        <div class="role-subtitle">Core CS • 3D Heart Model & Project Documentation</div>
+        <ul>
+          <li><strong>3D Mesh Sourcing:</strong> Source and integrate open-source heart mesh (<code>.glb</code>/<code>.gltf</code>).</li>
+          <li><strong>Interactive Raycasting:</strong> Implement click/hover detection on LAD, LCX, and RCA arteries.</li>
+          <li><strong>Vessel Callout Tooltips:</strong> Display anatomical branch info and stenosis probability on click.</li>
+          <li><strong>Documentation Lead:</strong> Author the comprehensive 6-page project submission report.</li>
+        </ul>
+      </div>
+
+      <!-- Anushka -->
+      <div class="team-card">
+        <h3>Anushka <span class="badge badge-primary">35% Rubric</span></h3>
+        <div class="role-subtitle">AI/ML • Code Integration & Explainability Pipeline</div>
+        <ul>
+          <li><strong>Model Integration:</strong> Synchronize Shaista's best model weights into <code>server.py</code>.</li>
+          <li><strong>SHAP Clinical Engine:</strong> Refine patient-level waterfall factor attributions.</li>
+          <li><strong>Patient Presets:</strong> Curate realistic demo clinical profiles in <code>demo_presets.json</code>.</li>
+          <li><strong>API Latency:</strong> Validate inference speed and error-handling between frontend and backend.</li>
+        </ul>
+      </div>
+
+      <!-- Tooba -->
+      <div class="team-card">
+        <h3>Tooba (Lead) <span class="badge badge-amber">Coordination</span></h3>
+        <div class="role-subtitle">Full-Stack Lead • Architecture, Video & Presentation</div>
+        <ul>
+          <li><strong>Architecture & Glue:</strong> Coordinate cross-module integration across the team.</li>
+          <li><strong>UI/UX Polish:</strong> Refine dashboard design, responsive layouts, and loading states.</li>
+          <li><strong>Demo Video:</strong> Record and edit the 3–10 minute workflow demonstration video.</li>
+          <li><strong>Pitch & Slides:</strong> Oversee pitch presentation deck and final submission packaging.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>4. Sprint Roadmap (What's Left To Be Done)</h2>
+    <div class="roadmap-list">
+      <ul style="margin: 0; padding-left: 20px;">
+        <li><strong>Phase 1 — Model & Asset Prep:</strong> Shaista generates benchmark metric table; Anamta selects the 3D heart <code>.glb</code> model.</li>
+        <li><strong>Phase 2 — System Integration:</strong> Anushka hooks up winning model weights and SHAP outputs into <code>server.py</code>; Anamta embeds raycasting in React Three Fiber.</li>
+        <li><strong>Phase 3 — Deliverables & Media:</strong> Anamta finalizes the 6-page documentation report; Tooba records the 3–10 min demo video and coordinates slide preparation.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
